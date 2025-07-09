@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins, Josefin_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
-import { Toaster } from "react-hot-toast";
-
+import CombineProvider from "@/providers/CombineProviders";
+// import Layout from "@/components/Layout";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,23 +17,22 @@ const josefin = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "Admin Layout",
+  title: "Green Project",
+  description: "Green Project",
 };
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${josefin.variable} antialiased`}
-      >
+    <div className={`${poppins.variable} ${josefin.variable} antialiased`}>
+      <CombineProvider>
+        {/* <Layout> */}
         {children}
-        <Toaster position="top-center" reverseOrder={false} />
-      </body>
-    </html>
+        {/* </Layout> */}
+      </CombineProvider>
+    </div>
   );
 }
