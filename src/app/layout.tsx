@@ -3,7 +3,7 @@ import { Poppins, Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
 import { Toaster } from "react-hot-toast";
-
+import CombineProvider from "@/providers/CombineProviders";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Kaydi Green Project",
 };
 
-export default function RootLayout({
+export default function MainLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -31,8 +31,10 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${josefin.variable} antialiased`}
       >
-        {children}
-        <Toaster position="top-center" reverseOrder={false} />
+        <CombineProvider>
+          {children}
+          <Toaster position="top-center" reverseOrder={false} />
+        </CombineProvider>
       </body>
     </html>
   );
