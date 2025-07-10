@@ -1,3 +1,9 @@
+export interface ParamsProps {
+    params: {
+        id: number
+    }
+}
+
 export interface Product {
     id: number;
     name: string;
@@ -7,6 +13,11 @@ export interface Product {
     images: string[];
     rating: number;
     isNew: boolean;
+    commonName: string;
+    scientificName: string;
+    botanicalFamily: string;
+    height: string;
+    origin: string;
     descriptions: string;
     categories: number[];
     colors: number[];

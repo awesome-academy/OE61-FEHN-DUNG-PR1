@@ -1,8 +1,12 @@
+"use client"
+
 import React from 'react'
 import { Product } from '@/type'
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
+
 
 interface ProductProps {
     product: Product;
@@ -10,6 +14,7 @@ interface ProductProps {
 
 const ProductCard = ({ product }: ProductProps) => {
     const rounded = Math.round(product.rating);
+    const router = useRouter();
 
     return (
         <div className='relative border group overflow-hidden'>
@@ -48,6 +53,7 @@ const ProductCard = ({ product }: ProductProps) => {
                         MUA NGAY
                     </button>
                     <div
+                        onClick={() => router.push(`/product/${product.id}`)}
                         className="bg-white w-10 h-10 rounded-full flex justify-center items-center shadow-md cursor-pointer hover:bg-gray-200 transition"
                     >
                         <FaSearch />
