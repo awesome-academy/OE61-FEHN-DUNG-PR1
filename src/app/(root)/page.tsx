@@ -11,12 +11,16 @@ import Hero from '@/sections/Hero'
 const HomePage = () => {
     return (
         <Layout>
-            {/* <Hero /> */}
+            <Hero />
             <div className='container flex flex-col gap-[20px]'>
                 <FeaturedProducts />
-                <div className='grid grid-cols-4 gap-4'>
-                    <BestSellerProducts col-span-1 />
-                    <PromotionalProducts col-span-3 />
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-[20px] md:mt-[40px]'>
+                    <div className='md:col-span-1'>
+                        <BestSellerProducts />
+                    </div>
+                    <div className='md:col-span-3'>
+                        <PromotionalProducts />
+                    </div>
                 </div>
                 <Banner />
                 <NewProducts />

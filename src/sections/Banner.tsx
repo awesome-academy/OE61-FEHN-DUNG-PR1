@@ -2,7 +2,9 @@ import React from 'react'
 
 const Banner = () => {
     return (
-        <div>Banner</div>
+        <div>
+            <img src="./images/banner.png" alt="banner image" className='w-full object-cover' />
+        </div>
     )
 }
 
