@@ -18,7 +18,7 @@ const CartPage = () => {
     return (
         <Layout>
             <div className='container '>
-                <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px] px-2 md:px-0'>
+                <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px] px-2 md:px-0 mb-[20px] md:mb-[50px]'>
                     <div>
                         <span className='mr-[5px] text-gray-400'>Home / </span>
                         <span className='text-green-600'>Giỏ hàng</span>
