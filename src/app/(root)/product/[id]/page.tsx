@@ -28,7 +28,7 @@ const ProductDetailPage = async ({ params }: ParamsProps) => {
     return (
         <Layout>
             <div className='container'>
-                <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px]'>
+                <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px] mb-[20px] md:mb-[50px]'>
                     <div className='mt-[20px]'>
                         <span className='mr-[5px] text-gray-400'>Home / </span>
                         <span className='text-green-600'>{findProduct?.name}</span>

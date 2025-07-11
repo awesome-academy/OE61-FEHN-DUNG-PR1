@@ -7,7 +7,7 @@ const SignUp = () => {
     return (
         <div className='container'>
 
-            <div className='px-2 md:px-0'>
+            <div className='px-2 md:px-0 mb-[20px] md:mb-[50px]'>
                 <div className='mt-[20px] mb-[50px]'>
                     <span className='mr-[5px] text-gray-400'>Home / </span>
                     <span className='text-green-600'>Đăng ký</span>

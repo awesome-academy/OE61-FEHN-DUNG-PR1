@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <footer className='w-full bg-[#4F4F4F] mt-[20px] md:mt-[50px]'>
+        <footer className='w-full bg-[#4F4F4F]'>
             <div className='container'>
                 <div className='flex flex-col md:flex-row gap-5 justify-center md:justify-between items-start md:items-center py-5 px-2 md:px-0'>
                     <div className='flex flex-col gap-2'>
@@ -55,16 +55,16 @@ const Footer = () => {
                             hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát
                             triển</p>
                         <div className='hidden md:flex items-center gap-2'>
-                            <IoIosPhonePortrait className='text-green-300' />
+                            <IoIosPhonePortrait className='text-green-600' />
                             <span>Điện thoại:  (84-4)66.558.868</span>
                         </div>
                         <div className='hidden md:flex items-center gap-2'>
-                            <HiOutlineMail className='text-green-300' />
+                            <HiOutlineMail className='text-green-600' />
                             <span>Email: infor@dkt.com.vn</span>
                         </div>
                     </div>
                     <div className='flex flex-col gap-4 mt-[50px] md:mt-0'>
-                        <h5 className='uppercase text-green-300 font-semibold mb-[10px] md:mb-[30px]'>thông tin khách hàng</h5>
+                        <h5 className='uppercase text-green-600 font-semibold mb-[10px] md:mb-[30px]'>thông tin khách hàng</h5>
                         <span className='flex items-center gap-1 text-[15px] md:text-[13px]'>
                             <FaAngleRight />
                             <p>Tài khoản của tôi</p>
@@ -88,7 +88,7 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center gap-10'>
                         <div className='flex flex-col gap-4 mt-[50px] md:mt-0'>
-                            <h5 className='uppercase text-green-300 font-semibold mb-[10px] md:mb-[30px]'>hỗ trợ dịch vụ</h5>
+                            <h5 className='uppercase text-green-600 font-semibold mb-[10px] md:mb-[30px]'>hỗ trợ dịch vụ</h5>
                             <span className='flex items-center gap-1 text-[15px] md:text-[13px]'>
                                 <FaAngleRight />
                                 <p>Hệ thống cửa hàng</p>
@@ -111,7 +111,7 @@ const Footer = () => {
                             </span>
                         </div>
                         <div className='flex flex-col gap-4 mt-[50px] md:mt-0'>
-                            <h5 className='uppercase text-green-300 font-semibold mb-[10px] md:mb-[30px]'>chính sách ưu đãi</h5>
+                            <h5 className='uppercase text-green-600 font-semibold mb-[10px] md:mb-[30px]'>chính sách ưu đãi</h5>
                             <span className='flex items-center gap-1 text-[15px] md:text-[13px]'>
                                 <FaAngleRight />
                                 <p>Chính sách giao hàng</p>
@@ -134,7 +134,7 @@ const Footer = () => {
                             </span>
                         </div>
                         <div className='flex flex-col gap-4 mt-[50px] md:mt-0'>
-                            <h5 className='uppercase text-green-300 font-semibold mb-[10px] md:mb-[30px]'>tin tức</h5>
+                            <h5 className='uppercase text-green-600 font-semibold mb-[10px] md:mb-[30px]'>tin tức</h5>
                             <span className='flex items-center gap-1 text-[15px] md:text-[13px]'>
                                 <FaAngleRight />
                                 <p>Tin mới</p>
@@ -181,4 +181,3 @@ const Footer = () => {
 }
 
 export default Footer
-

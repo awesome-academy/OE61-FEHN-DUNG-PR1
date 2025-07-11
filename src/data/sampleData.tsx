@@ -4,6 +4,7 @@ export const products = [
         name: "Cây Kim Tiền",
         price: 650000,
         estimatedPrice: 820000,
+        stock: 100,
         discount: 21,
         images: [
             "/images/cay_kimtien_1.png",
@@ -29,6 +30,7 @@ export const products = [
         name: "Cây Ngọc Bích",
         price: 570000,
         estimatedPrice: 670000,
+        stock: 100,
         discount: 15,
         images: [
             "/images/cay_ngocbich_2.png",
@@ -54,6 +56,7 @@ export const products = [
         name: "Cây Trầu Bà Vàng",
         price: 485000,
         estimatedPrice: 590000,
+        stock: 100,
         discount: 18,
         images: [
             "/images/cay_traubavang_3.png",
@@ -79,6 +82,7 @@ export const products = [
         name: "Cây Lan Ý",
         price: 780000,
         estimatedPrice: 950000,
+        stock: 100,
         discount: 17,
         images: [
             "/images/cay_lany_4.png",
@@ -104,6 +108,7 @@ export const products = [
         name: "Cây Bàng Singapore",
         price: 900000,
         estimatedPrice: 1150000,
+        stock: 100,
         discount: 22,
         images: [
             "/images/cay_bangsingapore_5.png",
@@ -129,6 +134,7 @@ export const products = [
         name: "Cây Sen Đá Hồng",
         price: 320000,
         estimatedPrice: 420000,
+        stock: 100,
         discount: 16,
         images: [
             "/images/cay_sendahong_6.png",
@@ -154,6 +160,7 @@ export const products = [
         name: "Cây Lưỡi Hổ",
         price: 560000,
         estimatedPrice: 700000,
+        stock: 100,
         discount: 20,
         images: [
             "/images/cay_luoiho_7.png",
@@ -179,6 +186,7 @@ export const products = [
         name: "Cây Dứa Cảnh Nến",
         price: 610000,
         estimatedPrice: 750000,
+        stock: 100,
         discount: 19,
         images: [
             "/images/cay_duacanhnen_8.png",
@@ -204,6 +212,7 @@ export const products = [
         name: "Cây Phát Tài",
         price: 820000,
         estimatedPrice: 980000,
+        stock: 100,
         discount: 16,
         images: [
             "/images/cay_phattai_9.png",
@@ -229,6 +238,7 @@ export const products = [
         name: "Cây Hồng Môn",
         price: 720000,
         estimatedPrice: 890000,
+        stock: 100,
         discount: 18,
         images: [
             "/images/cay_hongmon_10.png",
@@ -254,6 +264,7 @@ export const products = [
         name: "Cây Xương Rồng Mexico",
         price: 390000,
         estimatedPrice: 470000,
+        stock: 100,
         discount: 13,
         images: [
             "/images/cay_xuongrong_11.png",
@@ -279,6 +290,7 @@ export const products = [
         name: "Cây Dương Xỉ",
         price: 450000,
         estimatedPrice: 570000,
+        stock: 100,
         discount: 21,
         images: [
             "/images/cay_duongxi_12.png",
@@ -304,6 +316,7 @@ export const products = [
         name: "Cây Cau Tiểu Trâm",
         price: 490000,
         estimatedPrice: 590000,
+        stock: 100,
         discount: 17,
         images: [
             "/images/cay_cautieutram_13.png",
@@ -329,6 +342,7 @@ export const products = [
         name: "Cây Nhện",
         price: 420000,
         estimatedPrice: 520000,
+        stock: 100,
         discount: 15,
         images: [
             "/images/cay_nhen_14.png",
@@ -354,6 +368,7 @@ export const products = [
         name: "Cây Vạn Lộc",
         price: 610000,
         estimatedPrice: 750000,
+        stock: 100,
         discount: 19,
         images: [
             "/images/cay_vanloc_15.png",
@@ -376,8 +391,6 @@ export const products = [
     },
 ];
 
-
-// COLORS
 export const colors = [
     { id: 1, name: "Xanh lá", eName: "Green", color: "bg-green-500" },
     { id: 2, name: "Vàng", eName: "Yellow", color: "bg-yellow-500" },
@@ -387,7 +400,6 @@ export const colors = [
     { id: 6, name: "Hồng", eName: "Pink", color: "bg-pink-500" },
 ];
 
-// CATEGORIES
 export const categories = [
     { id: 1, name: "Cây chậu treo" },
     { id: 2, name: "Cây có hoa" },
@@ -431,7 +443,6 @@ export const news = [
     }
 ];
 
-// COMMENTS
 export const comments = [
     {
         id: 1,
@@ -477,14 +488,12 @@ export const comments = [
     }
 ];
 
-
-// USERS
 export const users = [
     {
         id: 1,
         name: "Nguyễn Văn A",
         phone: "0123456789",
-        email: "nva@gmail.com",
+        email: "kdung@gmail.com",
         websiteUrl: "https://test.com/vn",
         password: "123456",
         images: "/images/ava1.png"
@@ -509,8 +518,6 @@ export const users = [
     }
 ];
 
-
-// TAGS
 export const tags = [
     { id: 1, name: "Cây văn phòng" },
     { id: 2, name: "Cây phát lộc" },
@@ -522,3 +529,40 @@ export const tags = [
     { id: 8, name: "Quà tặng" },
     { id: 9, name: "Lưu niệm" },
 ];
+
+export const carts = [
+    {
+        id: 1,
+        userId: 1,
+        products: [
+            {
+                id: 1,
+                name: "Cây Kim Tiền",
+                price: 650000,
+                quantity: 1,
+                images: [
+                    "/images/cay_kimtien_1.png",
+                    "/images/cay_ngocbich_2.png",
+                    "/images/cay_traubavang_3.png",
+                    "/images/cay_lany_4.png",
+                    "/images/cay_bangsingapore_5.png",
+                    "/images/cay_sendahong_6.png",
+                ],
+            },
+            {
+                id: 2,
+                name: "Cây Ngọc Bích",
+                price: 570000,
+                quantity: 1,
+                images: [
+                    "/images/cay_ngocbich_2.png",
+                    "/images/cay_traubavang_3.png",
+                    "/images/cay_lany_4.png",
+                    "/images/cay_bangsingapore_5.png",
+                    "/images/cay_sendahong_6.png",
+                    "/images/cay_luoiho_7.png"
+                ],
+            }
+        ],
+    }
+]
