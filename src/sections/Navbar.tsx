@@ -44,7 +44,7 @@ const Navbar = () => {
     const router = useRouter();
 
     return (
-        <section className='w-full h-[60px] bg-[#84bb8a] z-50 sticky top-0 shadow-md'>
+        <section className='w-full h-[60px] bg-green-600 z-50 sticky top-0 shadow-md'>
             <div className='container h-[60px] '>
                 <div className='text-white h-full flex justify-between md:justify-start items-center px-2 md:px-0'>
                     <TiThMenu className='text-[20px] md:text-[24px] md:mr-[20px]' />
@@ -62,7 +62,7 @@ const Navbar = () => {
                     </div>
                     <div className='flex md:hidden justify-center items-center gap-5 text-white '>
                         <FaSearch className='text-[20px]' />
-                        <FaBasketShopping className='text-[20px]' />
+                        <FaBasketShopping onClick={() => router.push("/cart")} className='text-[20px]' />
                     </div>
                 </div>
             </div>
