@@ -1,9 +1,49 @@
-import React from 'react'
+"use client"
+
+import React, { useEffect } from 'react'
 import { FaSearch, FaPhoneAlt } from "react-icons/fa";
 import { FaBasketShopping } from "react-icons/fa6";
 import Image from 'next/image';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
+import { RootState } from "@/redux/store";
+import { carts } from '@/data/sampleData';
+import { setCartStart, setCartSuccess } from '@/redux/cart/cartSlice';
+import toast from 'react-hot-toast';
 
 const Header = () => {
+
+    const router = useRouter();
+    const dispatch = useDispatch();
+
+    const { cartCount, isLoaded } = useSelector((state: RootState) => state.cart);
+    const { currentUser } = useSelector((state: RootState) => state.user);
+
+    // dispatch(setCartStart());
+
+    const handleGetUserCart = () => {
+        const findCart = carts.find((cart) => cart.userId === currentUser?.id);
+
+        if (!findCart) {
+            toast.error("Người dùng này chưa có giỏ hàng")
+            return;
+        }
+
+        try {
+            dispatch(setCartSuccess({ products: findCart.products }))
+        } catch (error: any) {
+            console.log(error.message);
+        }
+    }
+
+    useEffect(() => {
+        if (currentUser && !isLoaded) {
+            handleGetUserCart();
+        }
+    }, [currentUser])
+
+
+
     return (
         <section
             className="w-full h-[300px] bg-center"
@@ -25,10 +65,14 @@ const Header = () => {
                             </button>
                         </div>
                     </div>
-                    <div className='flex justify-center items-center gap-3'>
-                        <FaBasketShopping className='text-[16px]' />
-                        <span>Sản phẩm</span>
-                    </div>
+                    {
+                        currentUser && (
+                            <div onClick={() => router.push("/cart")} className='flex justify-center items-center gap-2 hover:cursor-pointer'>
+                                <FaBasketShopping className='text-[16px]' />
+                                <span className='text-[16px]'> {cartCount} Sản phẩm</span>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
         </section>

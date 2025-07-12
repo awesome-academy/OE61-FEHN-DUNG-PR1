@@ -1,11 +1,14 @@
 "use client"
 
 import React from 'react'
-import { Product } from '@/type'
+import { CartItem, Product } from '@/type'
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/cart/cartSlice';
+import toast from 'react-hot-toast';
 
 
 interface ProductProps {
@@ -15,6 +18,19 @@ interface ProductProps {
 const ProductCard = ({ product }: ProductProps) => {
     const rounded = Math.round(product.rating);
     const router = useRouter();
+    const dispatch = useDispatch();
+
+    const handleAddToCart = (product: Product) => {
+        const cartItem = {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            quantity: 1,
+            images: product.images
+        }
+        dispatch(addToCart(cartItem));
+        toast.success("Thêm sản phẩm vào giỏ hàng thành công")
+    }
 
     return (
         <div className='relative border group overflow-hidden'>
@@ -48,6 +64,7 @@ const ProductCard = ({ product }: ProductProps) => {
                     z-10
                 ">
                     <button
+                        onClick={() => handleAddToCart(product)}
                         className="bg-[#84bb8a] text-white w-[120px] px-5 py-2 rounded-xl text-sm hover:bg-green-600 hover:cursor-pointer transition"
                     >
                         MUA NGAY

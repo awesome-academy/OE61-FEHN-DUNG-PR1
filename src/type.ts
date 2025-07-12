@@ -9,6 +9,7 @@ export interface Product {
     name: string;
     price: number;
     estimatedPrice: number;
+    stock: number;
     discount: number;
     images: string[];
     rating: number;
@@ -68,3 +69,20 @@ export interface User {
     password: string;
     images: string
 }
+
+export interface CartItem {
+    id: number;
+    name: string;
+    price: number;
+    quantity: number;
+    images: string[];
+}
+
+export interface Cart {
+    id: number;
+    userId: number;
+    products: CartItem[];
+}
+
+
+
