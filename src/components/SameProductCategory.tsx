@@ -59,8 +59,8 @@ const SameProductCategory = ({ product }: SameProductCategoryProps) => {
     return (
         <div className='px-2 md:px-0'>
             <div className='relative w-full pb-[10px] border-b mb-[40px] flex justify-between items-center'>
-                <h2 className='text-green-600 font-semibold'>Sản phẩm mới</h2>
-                <div className='absolute w-[110px] border border-green-600 bottom-[-2px]'></div>
+                <h2 className='text-green-600 font-semibold'>Sản phẩm cùng loại</h2>
+                <div className='absolute w-[150px] border border-green-600 bottom-[-2px]'></div>
                 <div className='flex items-center '>
                     <CiCircleChevLeft onClick={handleClickPrev} className='text-[24px] text-gray-500 hover:cursor-pointer' />
                     <CiCircleChevRight onClick={handleClickNext} className='text-[24px] text-gray-500 hover:cursor-pointer' />

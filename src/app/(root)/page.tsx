@@ -7,10 +7,12 @@ import News from '@/sections/News'
 import PromotionalProducts from '@/sections/PromotionalProducts'
 import Banner from '@/sections/Banner'
 import Hero from '@/sections/Hero'
+import PopUp from '@/components/PopUp'
 
 const HomePage = () => {
     return (
         <Layout>
+            <PopUp />
             <Hero />
             <div className='container flex flex-col gap-[20px]'>
                 <FeaturedProducts />
