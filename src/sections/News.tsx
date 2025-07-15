@@ -1,12 +1,12 @@
 "use client"
 
 import React, { useState } from 'react'
-import { news } from "@/data/sampleData"
+import { blogs } from "@/data/sampleData"
 import NewCard from "@/components/NewCard"
 
 const News = () => {
 
-    const sliceNews = news.slice(0, 3);
+    const sliceNews = blogs.slice(0, 3);
 
     return (
         <div className='hidden md:flex flex-col px-2 md:px-0 mb-[20px] md:mb-[50px]'>

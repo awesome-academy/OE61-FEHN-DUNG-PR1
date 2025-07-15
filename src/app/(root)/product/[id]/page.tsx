@@ -7,6 +7,7 @@ import ProductSubInfo from '@/components/ProductSubInfo';
 import SameProductCategory from '@/components/SameProductCategory';
 import { redirect } from 'next/navigation';
 import NotFoundComponent from '@/components/NotFoundComponent ';
+import Link from 'next/link';
 
 const ProductDetailPage = async ({ params }: ParamsProps) => {
 
@@ -30,7 +31,9 @@ const ProductDetailPage = async ({ params }: ParamsProps) => {
             <div className='container'>
                 <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px] mb-[20px] md:mb-[50px]'>
                     <div className='mt-[20px]'>
-                        <span className='mr-[5px] text-gray-400'>Home / </span>
+                        <Link href='/'>
+                            <span className='mr-[5px] text-gray-400 hover:cursor-pointer'>Home / </span>
+                        </Link>
                         <span className='text-green-600'>{findProduct?.name}</span>
                     </div>
                     <ProductDetail product={findProduct} />

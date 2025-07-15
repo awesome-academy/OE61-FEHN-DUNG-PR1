@@ -13,7 +13,7 @@ const ContactPage = () => {
                 loading="lazy"
             ></iframe>
             <div className='container'>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-[50px] px-2 md:px-0'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-[50px] px-2 md:px-0 mb-[20px] md:mb-[50px]'>
                     <div className='flex flex-col gap-[20px]'>
                         <form className='flex flex-col gap-[20px] mt-[30px]'>
                             <h3 className='text-green-600 uppercase font-bold text-[20px]'>Thông tin liên hệ</h3>
