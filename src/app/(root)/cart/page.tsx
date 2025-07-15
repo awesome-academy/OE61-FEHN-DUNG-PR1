@@ -20,7 +20,7 @@ const CartPage = () => {
             <div className='container '>
                 <div className='flex flex-col mt-[20px] gap-[20px] md:gap-[50px] px-2 md:px-0 mb-[20px] md:mb-[50px]'>
                     <div>
-                        <span className='mr-[5px] text-gray-400'>Home / </span>
+                        <span onClick={() => router.push("/")} className='mr-[5px] text-gray-400 hover:cursor-pointer'>Home / </span>
                         <span className='text-green-600'>Giỏ hàng</span>
                     </div>
                     <h3 className='text-green-600 uppercase font-bold text-[20px]'>Giỏ hàng</h3>

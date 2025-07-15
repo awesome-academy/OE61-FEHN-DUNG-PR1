@@ -32,12 +32,36 @@ const CartList = ({ items }: CartListProps) => {
         <table className='w-full'>
             <thead>
                 <tr>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px] hidden md:block'>Hình ảnh</th>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px]'>Tên sản phẩm</th>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px]'>Đơn giá</th>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px]'>Số lượng</th>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px]'>Thành tiền</th>
-                    <th className='border text-white bg-green-600 text-center text-[12px] md:text-[16px] uppercase h-[50px]'>Xóa</th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px] hidden md:block'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Hình ảnh
+                        </div>
+                    </th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px]'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Tên sản phẩm
+                        </div>
+                    </th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px]'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Đơn giá
+                        </div>
+                    </th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px]'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Số lượng
+                        </div>
+                    </th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px]'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Thành tiền
+                        </div>
+                    </th>
+                    <th className='border text-white bg-green-600 text-[12px] md:text-[16px] uppercase h-[50px]'>
+                        <div className='flex w-full h-full justify-center items-center'>
+                            Xóa
+                        </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>

@@ -36,11 +36,12 @@ export interface Category {
     name: string;
 }
 
-export interface New {
+export interface Blog {
     id: number;
     title: string;
     comments: number[];
     description: string;
+    contents: string;
     images: string[];
     categories: number[];
     tags: number[];
@@ -55,7 +56,7 @@ export interface Tag {
 export interface Comment {
     id: number;
     userId: number;
-    newId: number;
+    blogId: number;
     content: string;
     date: string;
 }
@@ -83,6 +84,3 @@ export interface Cart {
     userId: number;
     products: CartItem[];
 }
-
-
-

@@ -19,7 +19,7 @@ const AccountSidebar = ({ activeTab, setActiveTab }: AccountSidebarProps) => {
 
 
     return (
-        <div className='w-full md:w-[250px] h-full border-b md:border-r border-gray-400 p-[20px] flex flex-col gap-[30px]'>
+        <div className='w-full md:w-[250px] h-full border-b md:border-r md:border-b-0 border-gray-300 p-[20px] flex flex-col gap-[30px]'>
             <div className='flex justify-between items-center'>
                 <h2 className='text-[20px] font-semibold'>Quản lý tài khoản</h2>
                 {

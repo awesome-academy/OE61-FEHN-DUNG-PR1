@@ -62,7 +62,7 @@ const Navbar = () => {
                     </div>
                     <div className='flex md:hidden justify-center items-center gap-5 text-white '>
                         <FaSearch className='text-[20px]' />
-                        <FaBasketShopping onClick={() => router.push("/cart")} className='text-[20px]' />
+                        <FaBasketShopping onClick={() => router.push("/cart")} className='text-[20px] hover:cursor-pointer hover:text-gray-300' />
                     </div>
                 </div>
             </div>

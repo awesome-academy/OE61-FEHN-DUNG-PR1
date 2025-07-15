@@ -392,7 +392,7 @@ export const products = [
 ];
 
 export const colors = [
-    { id: 1, name: "Xanh lá", eName: "Green", color: "bg-green-500" },
+    { id: 1, name: "Xanh cây", eName: "Green", color: "bg-green-500" },
     { id: 2, name: "Vàng", eName: "Yellow", color: "bg-yellow-500" },
     { id: 3, name: "Xanh trời", eName: "Blue", color: "bg-blue-500" },
     { id: 4, name: "Tím", eName: "Purple", color: "bg-purple-500" },
@@ -410,78 +410,93 @@ export const categories = [
     { id: 7, name: "Cây nội thất" },
 ];
 
-export const news = [
+export const blogs = [
     {
         id: 1,
-        date: "Thứ 6, ngày 5, tháng 7, năm 2024", // Friday
+        date: "Thứ 6, ngày 5, tháng 7, năm 2024",
         title: "Xu hướng chọn cây phong thủy cho văn phòng năm 2024",
         comments: [1, 2],
         description: "Cùng điểm qua các loại cây phong thủy đang được ưa chuộng nhất cho dân văn phòng, vừa đẹp mắt vừa mang lại nhiều ý nghĩa.",
+        contents: "Năm 2024 đánh dấu sự bùng nổ về xu hướng sử dụng cây phong thủy trong không gian văn phòng, không chỉ đơn thuần mang lại vẻ đẹp xanh mát mà còn góp phần tạo dựng môi trường làm việc tích cực, thu hút tài lộc và may mắn. Cây để bàn như Kim Tiền, Phát Lộc, hoặc cây Đế Vương được nhiều người lựa chọn bởi hình dáng thanh thoát, dễ chăm sóc và phù hợp với đa số kiểu không gian làm việc hiện đại. Bên cạnh đó, các loại cây may mắn như Cây Đa Búp Đỏ hay Cây Cau Tiểu Trâm cũng được ưa chuộng nhờ ý nghĩa bảo vệ, xua đuổi khí xấu, hỗ trợ tinh thần. Cây phong thủy không chỉ là vật trang trí đơn giản mà còn đại diện cho mong muốn phát triển, thăng tiến trong công việc của chủ nhân.Việc chọn cây hợp mệnh, hợp tuổi theo phong thủy còn giúp giảm căng thẳng, tăng sự tập trung và tạo nên năng lượng tích cực cho cả tập thể.Đặc biệt, những cây như Trầu Bà hoặc Lan Ý còn có khả năng thanh lọc không khí, loại bỏ bụi mịn và các chất độc hại từ máy lạnh, thiết bị điện tử. Năm nay, xu hướng trưng bày cây cảnh nhỏ gọn, có thể dễ dàng sắp xếp trên bàn làm việc hoặc kệ sách lên ngôi, phù hợp với nhu cầu làm việc linh hoạt tại văn phòng, nhà ở hay thậm chí cả không gian coworking.Đầu tư vào một chậu cây phong thủy không chỉ mang lại giá trị thẩm mỹ mà còn góp phần cân bằng năng lượng và sức khỏe tinh thần cho mỗi nhân viên văn phòng.",
         images: ["/images/news1.png"],
         categories: [4, 5],
         tags: [1, 2, 6],
     },
     {
         id: 2,
-        date: "Thứ 2, ngày 1, tháng 7, năm 2024", // Monday
+        date: "Thứ 2, ngày 1, tháng 7, năm 2024",
         title: "Bí quyết chăm sóc Sen Đá không phải ai cũng biết",
         comments: [3, 4],
         description: "Sen Đá là loại cây nhỏ gọn, dễ chăm sóc, phù hợp với mọi không gian sống. Đọc ngay bí quyết giúp Sen Đá luôn tươi tắn.",
+        contents: "Sen Đá là một trong những loại cây cảnh mini được yêu thích nhất hiện nay nhờ hình dáng nhỏ xinh, đa dạng màu sắc và rất dễ chăm sóc. Tuy nhiên, để Sen Đá luôn tươi tốt, giữ được màu sắc đẹp mắt thì không phải ai cũng nắm rõ các bí quyết đơn giản nhưng cực kỳ hiệu quả dưới đây. Đầu tiên, ánh sáng là yếu tố then chốt.Sen Đá thích hợp đặt ở nơi có ánh sáng tự nhiên nhẹ, như gần cửa sổ hoặc ban công, tránh nắng gắt trực tiếp vào buổi trưa.Nếu thiếu sáng, lá cây sẽ bị kéo dài, màu nhạt và dễ rụng.Khi tưới nước, nguyên tắc khô mới tưới, cần được tuân thủ.Sen Đá rất sợ úng nên chỉ nên tưới khi mặt đất đã khô hoàn toàn, khoảng 7-10 ngày/ lần tùy khí hậu.Tưới nước vào buổi sáng sớm là tốt nhất, hạn chế nước đọng trên lá để tránh thối lá. Đất trồng Sen Đá phải tơi xốp, thoát nước tốt, có thể trộn đất tribat với xỉ than hoặc đá pumice.Đặc biệt, khi trồng trong chậu nhỏ, nên lót đáy chậu bằng một lớp sỏi để ngăn ngừa úng rễ.Ngoài ra, bạn nên thường xuyên kiểm tra sâu bệnh, loại bỏ lá héo để cây luôn khỏe mạnh và thẩm mỹ.Một bí quyết khác là định kỳ thay chậu, giúp cây phát triển tốt hơn và giữ được dáng đẹp tự nhiên. Với những bí quyết trên, bạn hoàn toàn có thể sở hữu những chậu Sen Đá xinh xắn, bền đẹp theo thời gian mà không tốn quá nhiều công chăm sóc.",
         images: ["/images/news2.png"],
         categories: [4, 5],
         tags: [5, 6, 8],
     },
     {
         id: 3,
-        date: "Thứ 3, ngày 25, tháng 6, năm 2024", // Tuesday
+        date: "Thứ 3, ngày 25, tháng 6, năm 2024",
         title: "7 lợi ích tuyệt vời của việc trồng cây nội thất",
         comments: [5, 6],
         description: "Trồng cây trong nhà không chỉ làm đẹp không gian mà còn giúp thanh lọc không khí, giảm căng thẳng, tăng hiệu suất làm việc.",
+        contents: "Trồng cây nội thất không chỉ là xu hướng làm đẹp không gian sống mà còn mang lại vô vàn lợi ích cho sức khỏe và tinh thần. Đầu tiên, cây xanh đóng vai trò như một bộ lọc không khí tự nhiên, giúp hấp thụ khí độc hại như formaldehyde, benzene, và CO2, mang lại bầu không khí trong lành hơn cho gia đình bạn. Các nghiên cứu chỉ ra rằng những người sống và làm việc trong môi trường có cây xanh thường giảm căng thẳng, lo âu và có khả năng tập trung cao hơn. Thứ hai, cây nội thất giúp cân bằng độ ẩm trong phòng, đặc biệt hữu ích vào mùa khô hoặc khi sử dụng điều hòa liên tục.Điều này giúp giảm các bệnh về đường hô hấp, da khô nứt nẻ, đồng thời hạn chế sự phát triển của vi khuẩn và nấm mốc.Một lợi ích khác là cây xanh giúp tăng năng lượng tích cực, đem lại cảm giác thư thái, dễ chịu sau mỗi ngày làm việc căng thẳng. Thứ tư, cây cảnh còn giúp giảm tiếng ồn, tạo môi trường yên tĩnh cho các hoạt động học tập, nghỉ ngơi.Đối với không gian nhỏ hẹp như căn hộ chung cư, nhà phố, cây nội thất còn là giải pháp trang trí tuyệt vời, giúp nới rộng không gian một cách tự nhiên. Cuối cùng, việc chăm sóc cây cũng là một cách rèn luyện sự kiên nhẫn, tạo thói quen sống lành mạnh và gắn kết thành viên trong gia đình thông qua các hoạt động cùng nhau chăm sóc, trang trí cây cảnh.",
         images: ["/images/news3.png"],
         categories: [7],
         tags: [4, 7, 9],
     }
 ];
 
+export const tags = [
+    { id: 1, name: "Cây văn phòng" },
+    { id: 2, name: "Cây phát lộc" },
+    { id: 3, name: "Cây xanh" },
+    { id: 4, name: "Cây trang trí" },
+    { id: 5, name: "Cây" },
+    { id: 6, name: "Plants" },
+    { id: 7, name: "Sức khỏe" },
+    { id: 8, name: "Quà tặng" },
+    { id: 9, name: "Lưu niệm" },
+];
+
 export const comments = [
     {
         id: 1,
-        newId: 1,
+        blogId: 1,
         userId: 1,
         content: "Bài viết rất hữu ích, mình đã chọn được cây phù hợp cho văn phòng.",
         date: "Thứ 6, ngày 5, tháng 7, năm 2024"
     },
     {
         id: 2,
-        newId: 1,
+        blogId: 1,
         userId: 2,
         content: "Mình thích bài này, cảm ơn tác giả đã chia sẻ!",
         date: "Thứ 6, ngày 5, tháng 7, năm 2024"
     },
     {
         id: 3,
-        newId: 2,
+        blogId: 2,
         userId: 2,
         content: "Bí quyết chăm sóc Sen Đá thật tuyệt vời, mình sẽ thử áp dụng.",
         date: "Thứ 2, ngày 1, tháng 7, năm 2024"
     },
     {
         id: 4,
-        newId: 2,
+        blogId: 2,
         userId: 3,
         content: "Cảm ơn bài viết, mình vừa mua một chậu sen đá mới.",
         date: "Thứ 2, ngày 1, tháng 7, năm 2024"
     },
     {
         id: 5,
-        newId: 3,
+        blogId: 3,
         userId: 3,
         content: "Các lợi ích này rất thiết thực, mình sẽ trồng thêm cây trong nhà.",
         date: "Thứ 3, ngày 25, tháng 6, năm 2024"
     },
     {
         id: 6,
-        newId: 3,
+        blogId: 3,
         userId: 1,
         content: "Trồng cây giúp mình cảm thấy thư giãn hơn, cám ơn bài viết.",
         date: "Thứ 3, ngày 25, tháng 6, năm 2024"
@@ -516,18 +531,6 @@ export const users = [
         password: "abcdef",
         images: "/images/ava3.png"
     }
-];
-
-export const tags = [
-    { id: 1, name: "Cây văn phòng" },
-    { id: 2, name: "Cây phát lộc" },
-    { id: 3, name: "Cây xanh" },
-    { id: 4, name: "Cây trang trí" },
-    { id: 5, name: "Cây" },
-    { id: 6, name: "Plants" },
-    { id: 7, name: "Sức khỏe" },
-    { id: 8, name: "Quà tặng" },
-    { id: 9, name: "Lưu niệm" },
 ];
 
 export const carts = [
