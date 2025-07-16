@@ -1,12 +1,15 @@
 "use client";
 
-import { Product } from '@/type';
+import { CartItem, Product } from '@/type';
 import React, { useState } from 'react'
 import { FaStarHalfAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { LuSquarePlus } from "react-icons/lu";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '@/redux/cart/cartSlice';
+import toast from 'react-hot-toast';
 
 interface ProductDetailProps {
     product?: Product
@@ -16,6 +19,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
 
     const [mainImage, setMainImage] = useState(product?.images[0]);
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
 
     const rounded = Math.round(product?.rating || 0);
 
@@ -29,6 +33,27 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         } else {
             setQuantity(quantity - 1);
         }
+    }
+
+    const handleAddToCart = () => {
+        if (!product) {
+            return;
+        }
+
+        const cartItem: CartItem = {
+            id: product?.id,
+            name: product?.name,
+            price: product?.price,
+            quantity: quantity,
+            images: product?.images
+        }
+        try {
+            dispatch(addToCart(cartItem));
+            toast.success("Thêm sản phẩm vào giỏ hàng thành công")
+        } catch (error: any) {
+            console.log(error.message)
+        }
+
     }
 
 
@@ -92,7 +117,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
                     <hr />
 
                     <div className='flex items-center gap-[15px]'>
-                        <button className='w-[150px] h-[40px] border border-green-600 rounded-[20px] bg-green-600 text-white uppercase flex justify-center items-center'>mua ngay</button>
+                        <button onClick={handleAddToCart} className='w-[150px] h-[40px] border border-green-600 rounded-[20px] bg-green-600 text-white uppercase flex justify-center items-center hover:cursor-pointer hover:opacity-75'>mua ngay</button>
                         <button className='w-[40px] h-[40px] border border-gray-300 rounded-full flex justify-center items-center'>
                             <FaSearch className='text-gray-600' />
                         </button>
