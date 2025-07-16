@@ -46,6 +46,7 @@ export interface Blog {
     categories: number[];
     tags: number[];
     date: string;
+    created_at: string;
 }
 
 export interface Tag {

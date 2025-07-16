@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useMemo, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Layout from '@/components/Layout'
 import ProductsSideBar from '@/components/products/ProductsSideBar'
 import ProductsDisplay from '@/components/products/ProductsDisplay'
@@ -11,6 +11,8 @@ import { products as allProducts } from "@/data/sampleData";
 const ProductsPage = () => {
     const router = useRouter();
 
+    const searchParams = useSearchParams();
+
     const [selectedCategory, setSelectedCategory] = useState(0);
     const [selectedPriceRange, setSelectedPriceRange] = useState(0);
     const [selectedColor, setSelectedColor] = useState(0);
@@ -18,6 +20,17 @@ const ProductsPage = () => {
     const [showValue, setShowValue] = useState(5);
     const [selectedType, setSelectedType] = useState("grid");
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        const extractCategoryFromUrl = searchParams.get("category");
+        if (extractCategoryFromUrl) {
+            const numericId = Number(extractCategoryFromUrl);
+            if (!isNaN(numericId)) {
+                setSelectedCategory(numericId);
+            }
+        }
+    }, [searchParams])
+
 
     const filteredProducts = useMemo(() => {
         return allProducts.filter((product) => {

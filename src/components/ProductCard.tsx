@@ -33,7 +33,7 @@ const ProductCard = ({ product }: ProductProps) => {
     }
 
     return (
-        <div className='relative border group overflow-hidden'>
+        <div onClick={() => router.push(`/product/${product.id}`)} className='relative border group overflow-hidden'>
             {product.isNew || product.discount > 0 ? (
                 <div className="absolute top-5 left-5 w-10 h-10 flex justify-center items-center rounded-full text-white font-semibold text-sm z-20">
                     {product.isNew ? (

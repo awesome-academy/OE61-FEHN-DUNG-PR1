@@ -421,6 +421,7 @@ export const blogs = [
         images: ["/images/news1.png"],
         categories: [4, 5],
         tags: [1, 2, 6],
+        created_at: "11:20:00 AM"
     },
     {
         id: 2,
@@ -432,6 +433,7 @@ export const blogs = [
         images: ["/images/news2.png"],
         categories: [4, 5],
         tags: [5, 6, 8],
+        created_at: "08:45:00 AM"
     },
     {
         id: 3,
@@ -443,7 +445,45 @@ export const blogs = [
         images: ["/images/news3.png"],
         categories: [7],
         tags: [4, 7, 9],
+        created_at: "19:10:00 PM"
+    },
+    {
+        id: 4,
+        date: "Thứ 5, ngày 4, tháng 7, năm 2024",
+        title: "Cây chậu treo: Lựa chọn hoàn hảo cho không gian nhỏ",
+        comments: [7, 8],
+        description: "Cây chậu treo giúp tiết kiệm diện tích và tạo điểm nhấn độc đáo cho căn hộ nhỏ hoặc góc làm việc hiện đại.",
+        contents: "Trong xu hướng hiện đại hóa không gian sống, cây chậu treo ngày càng được ưa chuộng nhờ sự linh hoạt và khả năng trang trí nổi bật. Việc sử dụng các loại cây như Dây Nhện, Lan Tim hay Trầu Bà treo không chỉ mang lại vẻ xanh mát cho góc nhà mà còn giúp tiết kiệm diện tích, phù hợp với những căn hộ nhỏ, văn phòng hạn chế không gian. Ngoài ra, cây chậu treo còn giúp làm dịu mắt, thanh lọc không khí, mang lại cảm giác thư giãn mỗi khi nhìn ngắm. Một số loại cây còn có khả năng hút bụi, giảm ô nhiễm không khí và tạo nên phong cách riêng biệt cho mỗi ngôi nhà. Khi lựa chọn cây chậu treo, bạn nên chú ý chọn loại cây phù hợp với ánh sáng, độ ẩm của không gian sống cũng như khả năng chăm sóc của bản thân. Việc bố trí cây hợp lý sẽ biến không gian nhỏ thành nơi lý tưởng để thư giãn, sáng tạo và tận hưởng cuộc sống xanh mỗi ngày.",
+        images: ["/images/news1.png"],
+        categories: [1, 6],
+        tags: [3, 4, 8],
+        created_at: "13:45:00 PM"
+    },
+    {
+        id: 5,
+        date: "Chủ nhật, ngày 7, tháng 7, năm 2024",
+        title: "Cây có hoa mang lại sức sống cho không gian sống",
+        comments: [9, 10],
+        description: "Cây có hoa không chỉ đẹp mà còn mang lại năng lượng tích cực, cải thiện tâm trạng và làm mới không gian sống của bạn.",
+        contents: "Thêm một chút sắc màu rực rỡ từ những chậu cây có hoa như Lan Ý, Hoa Giấy hoặc Dạ Yên Thảo sẽ khiến căn nhà trở nên tươi mới, tràn đầy sức sống. Cây có hoa không chỉ mang lại vẻ đẹp cho không gian mà còn giúp thanh lọc không khí, giảm bớt mệt mỏi, áp lực sau một ngày dài làm việc. Việc chăm sóc và ngắm nhìn cây nở hoa còn giúp tăng cảm giác thư thái, gắn kết các thành viên trong gia đình thông qua hoạt động cùng nhau chăm sóc, trang trí cây cảnh. Ngoài ra, cây hoa còn là món quà ý nghĩa cho người thân, bạn bè trong những dịp đặc biệt, thể hiện sự quan tâm và mong muốn gửi gắm năng lượng tích cực. Hãy thử lựa chọn những loại cây có hoa phù hợp với không gian và sở thích cá nhân để biến ngôi nhà thành nơi tràn ngập sắc màu hạnh phúc.",
+        images: ["/images/news2.png"],
+        categories: [2, 5],
+        tags: [2, 5, 9],
+        created_at: "10:05:00 AM"
+    },
+    {
+        id: 6,
+        date: "Thứ 7, ngày 6, tháng 7, năm 2024",
+        title: "Trang trí nhà cửa với cây dây leo: Xu hướng mới 2024",
+        comments: [11, 12],
+        description: "Cây dây leo giúp tạo điểm nhấn ấn tượng, làm dịu không gian sống và là xu hướng trang trí nổi bật năm 2024.",
+        contents: "Cây dây leo như Trầu Bà, Dây Nhện, hoặc Cẩm Tú Mai đang là xu hướng trang trí hot trong năm 2024 nhờ khả năng biến hóa không gian sống trở nên gần gũi thiên nhiên, mềm mại và ấn tượng hơn. Không chỉ dễ chăm sóc, các loại cây dây leo còn thích nghi tốt với điều kiện khí hậu trong nhà, phát triển mạnh mẽ dù ở ban công hay góc tường nhỏ. Việc bố trí cây dây leo dọc theo tường, cửa sổ hoặc treo trên kệ giúp tăng chiều sâu cho không gian, tạo hiệu ứng xanh mát, giảm nhiệt độ phòng vào những ngày oi bức. Ngoài ra, cây dây leo còn mang ý nghĩa phong thủy tốt, giúp xua đuổi khí xấu, thu hút tài lộc và may mắn cho gia đình. Đây là lựa chọn tuyệt vời cho những ai yêu thích sự sáng tạo, muốn làm mới không gian sống một cách đơn giản mà hiệu quả.",
+        images: ["/images/news3.png"],
+        categories: [3, 7],
+        tags: [1, 6, 7],
+        created_at: "16:00:00 PM"
     }
+
 ];
 
 export const tags = [
@@ -464,42 +504,42 @@ export const comments = [
         blogId: 1,
         userId: 1,
         content: "Bài viết rất hữu ích, mình đã chọn được cây phù hợp cho văn phòng.",
-        date: "Thứ 6, ngày 5, tháng 7, năm 2024"
+        date: "Thứ 6, 05/07/2024 12:00 AM"
     },
     {
         id: 2,
         blogId: 1,
         userId: 2,
         content: "Mình thích bài này, cảm ơn tác giả đã chia sẻ!",
-        date: "Thứ 6, ngày 5, tháng 7, năm 2024"
+        date: "Thứ 2, 01/07/2024 12:00 AM"
     },
     {
         id: 3,
         blogId: 2,
         userId: 2,
         content: "Bí quyết chăm sóc Sen Đá thật tuyệt vời, mình sẽ thử áp dụng.",
-        date: "Thứ 2, ngày 1, tháng 7, năm 2024"
+        date: "Thứ 2, 01/07/2024 12:00 AM"
     },
     {
         id: 4,
         blogId: 2,
         userId: 3,
         content: "Cảm ơn bài viết, mình vừa mua một chậu sen đá mới.",
-        date: "Thứ 2, ngày 1, tháng 7, năm 2024"
+        date: "Thứ 7, 08/07/2024 12:00 AM"
     },
     {
         id: 5,
         blogId: 3,
         userId: 3,
         content: "Các lợi ích này rất thiết thực, mình sẽ trồng thêm cây trong nhà.",
-        date: "Thứ 3, ngày 25, tháng 6, năm 2024"
+        date: "Thứ 4, 25/06/2024 12:00 AM"
     },
     {
         id: 6,
         blogId: 3,
         userId: 1,
         content: "Trồng cây giúp mình cảm thấy thư giãn hơn, cám ơn bài viết.",
-        date: "Thứ 3, ngày 25, tháng 6, năm 2024"
+        date: "Thứ 3, 24/06/2024 12:00 AM"
     }
 ];
 
@@ -529,7 +569,7 @@ export const users = [
         email: "leqc@gmail.com",
         websiteUrl: "https://lequocc.com",
         password: "abcdef",
-        images: "/images/ava3.png"
+        images: "/images/ava3.webp"
     }
 ];
 
