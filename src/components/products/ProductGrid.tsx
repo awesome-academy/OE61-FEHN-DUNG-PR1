@@ -32,6 +32,13 @@ const ProductGrid = ({ product }: ProductProps) => {
         toast.success("Thêm sản phẩm vào giỏ hàng thành công")
     }
 
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
+    }
+
     return (
         <div className='relative border group overflow-hidden'>
             {/* Image section */}
@@ -77,8 +84,8 @@ const ProductGrid = ({ product }: ProductProps) => {
                     )}
                 </div>
                 <div className='flex justify-center items-center gap-[10px]'>
-                    <span className='text-red-500'>{product.price} &#x20AB;</span>
-                    <span className='line-through text-gray-500 text-[12px]'>{product.estimatedPrice} &#x20AB;</span>
+                    <span className='text-red-500'>{formatCurrency(product.price)}</span>
+                    <span className='line-through text-gray-500 text-[12px]'>{formatCurrency(product.estimatedPrice)}</span>
                 </div>
             </div>
         </div>

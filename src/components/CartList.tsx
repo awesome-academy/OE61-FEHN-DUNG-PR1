@@ -27,6 +27,12 @@ const CartList = ({ items }: CartListProps) => {
         toast.success("Xóa sản phẩm khỏi giỏ hàng thành công")
     }
 
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
+    }
 
     return (
         <table className='w-full'>
@@ -73,7 +79,7 @@ const CartList = ({ items }: CartListProps) => {
                             </div>
                         </td>
                         <td className='text-center text-[12px] md:text-[16px] uppercase text-green-600 border'>{item?.name}</td>
-                        <td className='text-center text-[12px] md:text-[16px] border'>{item?.price} &#x20AB;</td>
+                        <td className='text-center text-[12px] md:text-[16px] border'>{formatCurrency(item?.price)}</td>
                         <td className='border'>
                             <div className='flex justify-center items-center gap-1 py-2'>
                                 <div onClick={() => handleToggleCartItem(item.id, "dec")} className='hover:cursor-pointer hover:bg-black/10 w-[20px] h-[20px] md:w-[40px] md:h-[40px] flex justify-center items-center border'>-</div>
@@ -86,7 +92,7 @@ const CartList = ({ items }: CartListProps) => {
 
                             </div>
                         </td>
-                        <td className='text-center text-[12px] md:text-[16px] border'>{item?.price * item?.quantity} &#x20AB;</td>
+                        <td className='text-center text-[12px] md:text-[16px] border'>{formatCurrency(item?.price * item?.quantity)}</td>
                         <td className='border'>
                             <div className='flex justify-center items-center'>
                                 <FaRegTrashCan onClick={() => handleRemoteFromCart(item.id)} className='text-[12px] md:text-[16px] hover:cursor-pointer text-red-500 hover:opacity-70' />

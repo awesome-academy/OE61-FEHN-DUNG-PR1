@@ -83,6 +83,13 @@ const Header = () => {
         }
     }, [])
 
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
+    }
+
     return (
         <section
             className="w-full h-[300px] bg-center"
@@ -116,7 +123,7 @@ const Header = () => {
                                             >
                                                 <div className='flex w-full justify-between items-center'>
                                                     <p className='font-semibold text-gray-800'>{product.name}</p>
-                                                    <p className='text-red-500 text-sm'>{product.price} đ</p>
+                                                    <p className='text-red-500 text-sm'>{formatCurrency(product.price)}</p>
                                                 </div>
                                             </Link>
                                         ))

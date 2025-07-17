@@ -6,20 +6,40 @@ import { GrSecure } from "react-icons/gr";
 import { RiBillLine } from "react-icons/ri";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { IoIosArrowDropupCircle } from "react-icons/io";
+import { useSearchParams } from 'next/navigation';
 
 interface AccountSidebarProps {
-    activeTab: string;
-    setActiveTab: (tab: string) => void;
+    activeTab: string | null;
+    setActiveTab: (tab: string | null) => void;
 }
 
 const AccountSidebar = ({ activeTab, setActiveTab }: AccountSidebarProps) => {
 
     const [openDropMenu, setOpenDropMenu] = useState(true);
+    const searchParams = useSearchParams();
 
+    useEffect(() => {
+        const param = searchParams.get("activeTab");
+        if (param) setActiveTab(param);
+    }, [searchParams]);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 600);
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (!isMobile) {
+            setOpenDropMenu(true);
+        }
+    }, [isMobile]);
 
     return (
-        <div className='w-full md:w-[250px] h-full border-b md:border-r md:border-b-0 border-gray-300 p-[20px] flex flex-col gap-[30px]'>
+        <div className='w-full md:w-[250px] h-full border-b md:border-r md:border-b-0 border-gray-300 p-[20px] flex flex-col gap-[10px] md:gap-[30px]'>
             <div className='flex justify-between items-center'>
                 <h2 className='text-[20px] font-semibold'>Quản lý tài khoản</h2>
                 {

@@ -106,7 +106,14 @@ const Navbar = () => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         }
-    }, [])
+    }, []);
+
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
+    }
 
     return (
         <section className='w-full h-[60px] bg-green-600 z-50 sticky top-0 shadow-md'>
@@ -204,7 +211,7 @@ const Navbar = () => {
                         searchResults.map((product: Product) => (
                             <Link href={`/product/${product.id}`} key={product.id} className='flex justify-between items-center gap-3 p-2 my-1 hover:bg-gray-100 rounded-md' onClick={closeAllPanels}>
                                 <p className='font-semibold text-gray-800 text-sm'>{product.name}</p>
-                                <p className='text-red-600 text-xs'>{product.price} đ</p>
+                                <p className='text-red-600 text-xs'>{formatCurrency(product.price)}</p>
                             </Link>
                         ))
                     ) : (

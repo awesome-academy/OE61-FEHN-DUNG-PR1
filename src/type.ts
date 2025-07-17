@@ -85,3 +85,27 @@ export interface Cart {
     userId: number;
     products: CartItem[];
 }
+
+export interface OrderItem extends CartItem {
+    orderId: number;
+    orderDate: string;
+}
+
+export interface ReceivedUserInfo {
+    name: string;
+    phone: string;
+    email: string;
+    address: string;
+    note?: string;
+}
+
+export interface Order {
+    id: number;
+    user: User;
+    receivedUser: ReceivedUserInfo;
+    items: OrderItem[];
+    totalPrice: number;
+    status: string;
+    createdAt: string;
+    paymentMethod: string;
+}

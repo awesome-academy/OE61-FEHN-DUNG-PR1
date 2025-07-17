@@ -609,3 +609,47 @@ export const carts = [
         ],
     }
 ]
+
+export const orders = {
+    id: 1,
+    user: {
+        id: 1,
+        name: "Nguyễn Văn A",
+        phone: "0123456789",
+        email: "kdung@gmail.com",
+        websiteUrl: "https://test.com/vn",
+        password: "123456",
+        images: "/images/ava1.png"
+    },
+    receivedUser: {
+        name: "Nguyen Van B",
+        phone: "0907654321",
+        email: "b@gmail.com",
+        address: "123 ABC Street, District 1, HCMC",
+        note: "Giao giờ hành chính"
+    },
+    items: [
+        {
+            id: 1,
+            name: "Cây Kim Tiền",
+            price: 650000,
+            quantity: 1,
+            images: ["/images/cay_kimtien_1.png"],
+            orderId: 1,
+            orderDate: "2024-07-17T12:00:00Z"
+        },
+        {
+            id: 2,
+            name: "Cây Ngọc Bích",
+            price: 570000,
+            quantity: 1,
+            images: ["/images/cay_ngocbich_2.png"],
+            orderId: 1,
+            orderDate: "2024-07-17T12:00:00Z"
+        }
+    ],
+    totalPrice: 1220000,
+    status: "pending",
+    createdAt: "2024-07-17T12:00:00Z"
+};
+
