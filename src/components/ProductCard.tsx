@@ -6,9 +6,10 @@ import { FaStarHalfAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '@/redux/cart/cartSlice';
 import toast from 'react-hot-toast';
+import { RootState } from '@/redux/store';
 
 
 interface ProductProps {
@@ -19,8 +20,16 @@ const ProductCard = ({ product }: ProductProps) => {
     const rounded = Math.round(product.rating);
     const router = useRouter();
     const dispatch = useDispatch();
+    const { currentUser } = useSelector((state: RootState) => state.user);
 
-    const handleAddToCart = (product: Product) => {
+    const handleAddToCart = (e: React.MouseEvent, product: Product) => {
+        e.stopPropagation();
+        if (!currentUser) {
+            toast("Vui lòng đăng nhập trước khi mua hàng");
+            router.push("/login");
+            return;
+        }
+
         const cartItem = {
             id: product.id,
             name: product.name,
@@ -30,6 +39,13 @@ const ProductCard = ({ product }: ProductProps) => {
         }
         dispatch(addToCart(cartItem));
         toast.success("Thêm sản phẩm vào giỏ hàng thành công")
+    }
+
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
     }
 
     return (
@@ -64,7 +80,7 @@ const ProductCard = ({ product }: ProductProps) => {
                     z-10
                 ">
                     <button
-                        onClick={() => handleAddToCart(product)}
+                        onClick={(e) => handleAddToCart(e, product)}
                         className="bg-[#84bb8a] text-white w-[120px] px-5 py-2 rounded-xl text-sm hover:bg-green-600 hover:cursor-pointer transition"
                     >
                         MUA NGAY
@@ -90,8 +106,8 @@ const ProductCard = ({ product }: ProductProps) => {
                     )}
                 </div>
                 <div className='flex justify-center items-center gap-[10px]'>
-                    <span className='text-red-500'>{product.price} &#x20AB;</span>
-                    <span className='line-through text-gray-500 text-[12px]'>{product.estimatedPrice} &#x20AB;</span>
+                    <span className='text-red-500'>{formatCurrency(product.price)}</span>
+                    <span className='line-through text-gray-500 text-[12px]'>{formatCurrency(product.estimatedPrice)}</span>
                 </div>
             </div>
         </div>

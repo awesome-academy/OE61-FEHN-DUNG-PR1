@@ -34,6 +34,7 @@ const ContactPage = () => {
                                     <label className='text-gray-400 text-[13px]' htmlFor="comment">Bình luận <span style={{ color: 'red' }}>*</span></label>
                                     <input type="text" className='w-full border border-gray-300 p-2 min-h-[200px]' />
                                 </div>
+                                <div className='w-[150px] h-[50px] mb-[20px] flex justify-center items-center gap-[20px] bg-green-600 text-white rounded-[20px] hover:cursor-pointer hover:opacity-75'>Gửi</div>
                             </div>
                         </form>
                     </div>

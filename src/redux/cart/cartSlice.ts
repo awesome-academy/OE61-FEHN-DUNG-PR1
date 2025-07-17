@@ -107,6 +107,32 @@ const cartSlice = createSlice({
                 0
             );
 
+        },
+        removeOrderedItem: (
+            state,
+            action: PayloadAction<CartItem>
+        ) => {
+            const { id, quantity } = action.payload;
+            const existingItem = state.items.find(item => item.id === id);
+
+            if (existingItem) {
+                if (existingItem.quantity >= quantity) {
+                    existingItem.quantity -= quantity;
+                }
+                if (existingItem.quantity <= 0) {
+                    state.items = state.items.filter((item) => item.id !== id);
+                }
+            }
+
+            state.cartCount = state.items.reduce(
+                (total, item) => total + item.quantity,
+                0
+            )
+
+            state.totalPrice = state.items.reduce(
+                (total, item) => total + item.quantity * item.price,
+                0
+            );
         }
     }
 });
@@ -117,7 +143,8 @@ export const {
     clearCart,
     setCartStart,
     setCartSuccess,
-    toggleCartItem
+    toggleCartItem,
+    removeOrderedItem
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

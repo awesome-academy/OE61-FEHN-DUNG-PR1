@@ -33,6 +33,13 @@ const ProductList = ({ product }: ProductProps) => {
         toast.success("Thêm sản phẩm vào giỏ hàng thành công")
     }
 
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
+    }
+
     return (
         <div className='flex gap-5 md:gap-10 w-full h-[300px] border'>
             <img src={product.images[0]} alt="image" className='w-[300px] h-[300px] object-cover' />
@@ -48,7 +55,7 @@ const ProductList = ({ product }: ProductProps) => {
                     )}
                 </div>
                 <p className='text-[13px]'>{product.descriptions}</p>
-                <p className='text-red-600 text-[20px]'>{product.price}  &#x20AB;</p>
+                <p className='text-red-600 text-[20px]'>{formatCurrency(product.price)}</p>
                 <div className='flex items-center gap-4'>
                     <button
                         onClick={() => handleAddToCart(product)}

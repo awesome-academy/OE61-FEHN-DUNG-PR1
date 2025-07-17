@@ -12,7 +12,7 @@ import { useRouter } from 'next/navigation'
 
 const AccountPage = () => {
 
-    const [activeTab, setActiveTab] = useState("personal");
+    const [activeTab, setActiveTab] = useState<string | null>("personal");
     const router = useRouter();
 
     const renderContent = () => {

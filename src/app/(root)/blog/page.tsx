@@ -55,8 +55,8 @@ const BlogPage = () => {
             <div className='container'>
                 <div className='flex flex-col mt-[20px] gap-[20px] px-2 md:px-0 md:gap-[50px] mb-[20px] md:mb-[50px]'>
                     <div className='mt-[20px]'>
-                        <span onClick={() => router.push("/")} className='mr-[5px] text-gray-400 hover:cursor-pointer'>Home / </span>
-                        <span className='text-green-600'>Tin tức</span>
+                        <span onClick={() => router.push("/")} className='mr-[5px] text-gray-400 hover:font-semibold hover:cursor-pointer'>Home / </span>
+                        <span className='text-green-600 hover:font-semibold hover:cursor-pointer'>Tin tức</span>
                     </div>
                     {isMobile && selectedBlog ? (
                         <div className='flex flex-col gap-[20px]'>

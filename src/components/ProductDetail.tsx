@@ -7,9 +7,11 @@ import { FaStar } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { LuSquarePlus } from "react-icons/lu";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '@/redux/cart/cartSlice';
 import toast from 'react-hot-toast';
+import { RootState } from '@/redux/store';
+import { useRouter } from 'next/navigation';
 
 interface ProductDetailProps {
     product?: Product
@@ -22,6 +24,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     const dispatch = useDispatch();
 
     const rounded = Math.round(product?.rating || 0);
+
+    const { currentUser } = useSelector((state: RootState) => state.user);
+    const router = useRouter();
 
     const handleIncreaseQuantity = () => {
         setQuantity(quantity + 1);
@@ -40,6 +45,12 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             return;
         }
 
+        if (!currentUser) {
+            toast("Vui lòng đăng nhập trước khi mua hàng");
+            router.push("/login");
+            return;
+        }
+
         const cartItem: CartItem = {
             id: product?.id,
             name: product?.name,
@@ -54,6 +65,13 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
             console.log(error.message)
         }
 
+    }
+
+    const formatCurrency = (amount: number) => {
+        return new Intl.NumberFormat('vi-VN', {
+            style: 'currency',
+            currency: 'VND'
+        }).format(amount)
     }
 
 
@@ -96,8 +114,8 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
                             )}
                         </div>
                         <div className='flex items-center gap-[10px]'>
-                            <span className='text-red-500 font-semibold text-[20px]'>{product?.price} &#x20AB;</span>
-                            <span className='text-gray-500 line-through text-[14px]'>{product?.estimatedPrice} &#x20AB;</span>
+                            <span className='text-red-500 font-semibold text-[20px]'>{formatCurrency(product?.price ?? 0)}</span>
+                            <span className='text-gray-500 line-through text-[14px]'>{formatCurrency(product?.estimatedPrice ?? 0)}</span>
                         </div>
                     </div>
 
