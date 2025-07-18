@@ -551,7 +551,8 @@ export const users = [
         email: "kdung@gmail.com",
         websiteUrl: "https://test.com/vn",
         password: "123456",
-        images: "/images/ava1.png"
+        images: "/images/ava1.png",
+        role: "customer"
     },
     {
         id: 2,
@@ -559,8 +560,9 @@ export const users = [
         phone: "0987654321",
         email: "tranb@gmail.com",
         websiteUrl: "https://websiteb.com",
-        password: "654321",
-        images: "/images/ava2.png"
+        password: "123456",
+        images: "/images/ava2.png",
+        role: "customer"
     },
     {
         id: 3,
@@ -568,8 +570,19 @@ export const users = [
         phone: "0911223344",
         email: "leqc@gmail.com",
         websiteUrl: "https://lequocc.com",
-        password: "abcdef",
-        images: "/images/ava3.webp"
+        password: "123456",
+        images: "/images/ava3.webp",
+        role: "customer"
+    },
+    {
+        id: 4,
+        name: "Admin",
+        phone: "0911223344",
+        email: "admin@gmail.com",
+        websiteUrl: "https://admin.com",
+        password: "123456",
+        images: "/images/admin.jpg",
+        role: "admin"
     }
 ];
 
@@ -607,49 +620,185 @@ export const carts = [
                 ],
             }
         ],
+    },
+    {
+        id: 2,
+        userId: 2,
+        products: [
+            {
+                id: 3,
+                name: "Cây Trầu Bà Vàng",
+                price: 485000,
+                quantity: 2,
+                images: [
+                    "/images/cay_traubavang_3.png"
+                ],
+            },
+            {
+                id: 4,
+                name: "Cây Lan Ý",
+                price: 780000,
+                quantity: 1,
+                images: [
+                    "/images/cay_lany_4.png"
+                ],
+            }
+        ],
+    },
+    {
+        id: 3,
+        userId: 3,
+        products: [
+            {
+                id: 5,
+                name: "Cây Bàng Singapore",
+                price: 900000,
+                quantity: 1,
+                images: [
+                    "/images/cay_bangsingapore_5.png"
+                ],
+            },
+            {
+                id: 6,
+                name: "Cây Sen Đá Hồng",
+                price: 320000,
+                quantity: 3,
+                images: [
+                    "/images/cay_sendahong_6.png"
+                ],
+            }
+        ]
     }
 ]
 
-export const orders = {
-    id: 1,
-    user: {
+export const orders = [
+    {
         id: 1,
-        name: "Nguyễn Văn A",
-        phone: "0123456789",
-        email: "kdung@gmail.com",
-        websiteUrl: "https://test.com/vn",
-        password: "123456",
-        images: "/images/ava1.png"
-    },
-    receivedUser: {
-        name: "Nguyen Van B",
-        phone: "0907654321",
-        email: "b@gmail.com",
-        address: "123 ABC Street, District 1, HCMC",
-        note: "Giao giờ hành chính"
-    },
-    items: [
-        {
+        user: {
             id: 1,
-            name: "Cây Kim Tiền",
-            price: 650000,
-            quantity: 1,
-            images: ["/images/cay_kimtien_1.png"],
-            orderId: 1,
-            orderDate: "2024-07-17T12:00:00Z"
+            name: "Nguyễn Văn A",
+            phone: "0123456789",
+            email: "kdung@gmail.com",
+            websiteUrl: "https://test.com/vn",
+            password: "123456",
+            images: "/images/ava1.png"
         },
-        {
+        receivedUser: {
+            name: "Nguyen Van B",
+            phone: "0907654321",
+            email: "b@gmail.com",
+            address: "123 ABC Street, District 1, HCMC",
+            note: "Giao giờ hành chính"
+        },
+        items: [
+            {
+                id: 1,
+                name: "Cây Kim Tiền",
+                price: 650000,
+                quantity: 1,
+                images: ["/images/cay_kimtien_1.png"],
+                orderId: 1,
+                orderDate: "2024-07-17T12:00:00Z"
+            },
+            {
+                id: 2,
+                name: "Cây Ngọc Bích",
+                price: 570000,
+                quantity: 1,
+                images: ["/images/cay_ngocbich_2.png"],
+                orderId: 1,
+                orderDate: "2024-07-17T12:00:00Z"
+            }
+        ],
+        totalPrice: 1220000,
+        status: "pending",
+        paymentMethod: "COD",
+        createdAt: "2024-07-17T12:00:00Z"
+    },
+    {
+        id: 2,
+        user: {
             id: 2,
-            name: "Cây Ngọc Bích",
-            price: 570000,
-            quantity: 1,
-            images: ["/images/cay_ngocbich_2.png"],
-            orderId: 1,
-            orderDate: "2024-07-17T12:00:00Z"
-        }
-    ],
-    totalPrice: 1220000,
-    status: "pending",
-    createdAt: "2024-07-17T12:00:00Z"
-};
-
+            name: "Trần Thị B",
+            phone: "0987654321",
+            email: "tranb@gmail.com",
+            websiteUrl: "https://websiteb.com",
+            password: "654321",
+            images: "/images/ava2.png"
+        },
+        receivedUser: {
+            name: "Tran Thi B",
+            phone: "0987654321",
+            email: "tranb@gmail.com",
+            address: "456 DEF Road, District 3, HCMC",
+            note: "Liên hệ trước khi giao"
+        },
+        items: [
+            {
+                id: 3,
+                name: "Cây Trầu Bà Vàng",
+                price: 485000,
+                quantity: 2,
+                images: ["/images/cay_traubavang_3.png"],
+                orderId: 2,
+                orderDate: "2024-07-18T09:00:00Z"
+            },
+            {
+                id: 4,
+                name: "Cây Lan Ý",
+                price: 780000,
+                quantity: 1,
+                images: ["/images/cay_lany_4.png"],
+                orderId: 2,
+                orderDate: "2024-07-18T09:00:00Z"
+            }
+        ],
+        totalPrice: 1750000,
+        status: "shipping",
+        paymentMethod: "stripe",
+        createdAt: "2024-07-18T09:00:00Z"
+    },
+    {
+        id: 3,
+        user: {
+            id: 3,
+            name: "Lê Quốc C",
+            phone: "0911223344",
+            email: "leqc@gmail.com",
+            websiteUrl: "https://lequocc.com",
+            password: "abcdef",
+            images: "/images/ava3.webp"
+        },
+        receivedUser: {
+            name: "Le Quoc C",
+            phone: "0911223344",
+            email: "leqc@gmail.com",
+            address: "789 GHI Avenue, District 7, HCMC",
+            note: "Giao cuối tuần"
+        },
+        items: [
+            {
+                id: 5,
+                name: "Cây Bàng Singapore",
+                price: 900000,
+                quantity: 1,
+                images: ["/images/cay_bangsingapore_5.png"],
+                orderId: 3,
+                orderDate: "2024-07-19T15:00:00Z"
+            },
+            {
+                id: 6,
+                name: "Cây Sen Đá Hồng",
+                price: 320000,
+                quantity: 3,
+                images: ["/images/cay_sendahong_6.png"],
+                orderId: 3,
+                orderDate: "2024-07-19T15:00:00Z"
+            }
+        ],
+        totalPrice: 1860000,
+        status: "delivered",
+        paymentMethod: "zalopay",
+        createdAt: "2024-07-19T15:00:00Z"
+    }
+];

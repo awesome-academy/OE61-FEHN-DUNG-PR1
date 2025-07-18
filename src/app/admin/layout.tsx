@@ -3,7 +3,8 @@ import { Poppins, Josefin_Sans } from "next/font/google";
 import "../globals.css";
 
 import CombineProvider from "@/providers/CombineProviders";
-// import Layout from "@/components/Layout";
+import AdminProtectedLayout from "@/providers/AdminProtectedLayout";
+import AdminSidebar from "@/components/admin/AdminSidebar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,9 +30,16 @@ export default function AdminLayout({
   return (
     <div className={`${poppins.variable} ${josefin.variable} antialiased`}>
       <CombineProvider>
-        {/* <Layout> */}
-        {children}
-        {/* </Layout> */}
+        <AdminProtectedLayout>
+          <div className="flex h-screen bg-gray-50">
+            <AdminSidebar />
+            <main className="flex-1 overflow-y-auto p-4 md:p-6">
+              <div className="max-w-7xl mx-auto">
+                {children}
+              </div>
+            </main>
+          </div>
+        </AdminProtectedLayout>
       </CombineProvider>
     </div>
   );

@@ -3,7 +3,6 @@ import { Poppins, Josefin_Sans } from "next/font/google";
 import "../globals.css";
 
 import CombineProvider from "@/providers/CombineProviders";
-// import Layout from "@/components/Layout";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -29,9 +28,7 @@ export default function RootLayout({
     return (
         <div className={`${poppins.variable} ${josefin.variable} antialiased`}>
             <CombineProvider>
-                {/* <Layout> */}
-                    {children}
-                {/* </Layout> */}
+                {children}
             </CombineProvider>
         </div>
     );
