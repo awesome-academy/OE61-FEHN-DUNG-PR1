@@ -25,7 +25,7 @@ const Header = () => {
         const findCart = carts.find((cart) => cart.userId === currentUser?.id);
 
         if (!findCart) {
-            toast.error("Người dùng này chưa có giỏ hàng")
+            console.log("Người dùng này không có giỏ hàng")
             return;
         }
 
@@ -37,7 +37,7 @@ const Header = () => {
     }
 
     useEffect(() => {
-        if (currentUser && !isLoaded) {
+        if (currentUser && currentUser.role === "customer" && !isLoaded) {
             handleGetUserCart();
         }
     }, [currentUser])

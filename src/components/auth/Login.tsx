@@ -33,7 +33,11 @@ const Login = () => {
             } else {
                 toast.success(result.message);
                 dispatch(signInSuccess(result.data));
-                router.push("/");
+                if (result.data?.role === "customer") {
+                    router.push("/");
+                } else if (result.data?.role === "admin") {
+                    router.push("/admin");
+                }
             }
         } catch (error: any) {
             console.log(error.message);
